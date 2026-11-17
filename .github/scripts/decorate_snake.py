@@ -1,7 +1,7 @@
-"""Add deterministic decorative green squares to the snake SVG grid.
+"""Style the snake's contribution-style grid with decorative green squares.
 
-These squares are illustrative only; they are NOT GitHub contributions.
-Real contribution squares and snake animations remain untouched.
+Illustrative artwork only; NOT a record of the user's GitHub contributions.
+This post-processes generated SVGs while retaining the animated snake.
 """
 from pathlib import Path
 import re
@@ -22,8 +22,9 @@ for path in (
     def decorate(match):
         x, y = int(match.group(1)), int(match.group(2))
         column, row = (x - 2) // 16, (y - 2) // 16
+        # Fill ~75% of empty days; stay deterministic across regenerations.
         value = (column * 37 + row * 43 + column * row * 7 + 11) % 101
-        if value >= 43:
+        if value >= 76:
             return match.group(0)
         shade = (column * 3 + row * 5) % 4
         return f'<rect class="c decor{shade}" x="{x}" y="{y}"'
@@ -32,7 +33,7 @@ for path in (
     svg = svg.replace("</style>", STYLE + "</style>", 1)
     svg = svg.replace(
         "</desc>",
-        " — includes decorative green squares; not a real contribution count</desc>",
+        " — decorative green cells; not actual GitHub contribution counts</desc>",
         1,
     )
     path.write_text(svg, encoding="utf-8")
