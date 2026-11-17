@@ -1,7 +1,6 @@
 # Hi 👋, I'm Aaryan Verma
 
-### Computer Science Student | Full-Stack Development | AI & Machine Learning 🚀
-
+### Computer Science Student | Full-Stack Development | AI & Machine Learning 🚀 | 3-D Animation\Modelling
 ---
 
 ## 👨‍💻 About Me
@@ -11,6 +10,7 @@
 - 🏟️ Building **Turnstile**, an interactive stadium ticket-booking prototype
 - 💻 Interested in full-stack development, system design, and practical products
 - 🚀 Learning by building, testing, and refining real-world projects
+- 🎨 Have a creativity in 3-D animation and modeling
 
 ---
 
