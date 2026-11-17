@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - ".github/workflows/snake.yml"
+      - ".github/scripts/decorate_snake.py"
 
 permissions:
   contents: write
@@ -18,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Check out decoration script
+        uses: actions/checkout@v4
+
       - name: Generate light and dark SVG animations
         uses: Platane/snk/svg-only@v3
         with:
@@ -25,6 +29,9 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg?color_snake=%23F97316&color_dots=%23EEEAF7,%23D8C8FA,%23B69CF4,%23865DDC,%2356309C
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23FBBF24&color_dots=%23232639,%23534677,%237C5AA6,%23A17DDB,%23D0B5FF
+
+      - name: Add decorative green squares (illustrative, not actual contributions)
+        run: python3 .github/scripts/decorate_snake.py
 
       - name: Publish animations to output branch
         uses: crazy-max/ghaction-github-pages@v4
