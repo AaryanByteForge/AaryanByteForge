@@ -81,6 +81,16 @@ A web development project focused on an education-themed interface.
 
 ---
 
+## 🐍 Contribution Snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AaryanByteForge/AaryanByteForge/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AaryanByteForge/AaryanByteForge/output/github-contribution-grid-snake.svg">
+  <img alt="Animated snake eating GitHub contributions" src="https://raw.githubusercontent.com/AaryanByteForge/AaryanByteForge/output/github-contribution-grid-snake.svg">
+</picture>
+
+---
+
 ## 🤝 Connect With Me
 
 Explore my repositories and projects here: **[github.com/AaryanByteForge](https://github.com/AaryanByteForge)**.
